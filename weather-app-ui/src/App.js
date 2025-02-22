@@ -24,6 +24,7 @@ function WeatherApp() {
         `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=ee78bba522ddf9560321044cf066bda0&units=metric`
       );
       const data = await response.json();
+      console.log(data);
       if (data.cod === 200) {
         setWeatherData(data);
       } else {
